@@ -1,0 +1,23 @@
+<html>
+  <head>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js" charset="utf-8"></script>
+      <title>Vue Sample</title>
+  </head>
+  <body>
+    <div id="app">
+      <span id ="counter">{{counter}}</span>
+    </div>
+      <script>
+        var counterView = new Vue({
+          el: '#counter',
+          data: {
+            counter: 1
+          }
+        });
+        setInterval(addCount, 1000);
+        function addCount(){
+          counterView.counter += 1;
+        }
+      </script>
+  </body>
+</html>
